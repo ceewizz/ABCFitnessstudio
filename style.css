@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', san-serif;
+
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+
+
+h4 {
+    font-size: 20px;
+    color: black;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: lightblue;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+
+/*Header start*/
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: whitesmoke;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover {
+    color: lightseagreen;
+}
+
+/*Home Page*/
+#logo{
+    background-image: url("img/logo.png");
+    height: 100vh;
+    width: 45%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#logo h4{
+   color: blueviolet;
+}
+
+#logo h1{
+    color: aqua;
+}
+
+#logo h2{
+    color: blue;
+}
+
+#logo p{
+    color: yellowgreen;
+}
+
+#packages1 {
+    text-align: center;
+}
+
+#packages1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+   
+
+}
+
+#packages1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid whitesmoke;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+}
+
+#packages1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: indigo;
+}
+
+#newsletter h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+#newsletter button {
+    background-color: darkcyan;
+    font-size: 16px;
+    color: white;
+    white-space: nowrap;
+}
+
+footer {
+    background-color: navy;
+
+}
+
+footer h4{
+    color: gray;
+}
+
+footer p{
+    color: darkgrey;
+}
+
+/* Media Query */
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color:beige;
+        box-shadow:  0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+    }
+    #navbar.active {
+        right: 0px;
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+  
+}
+@media (max-width: 477px) {
+    #header {
+        padding: 10px 30px;
+  
+    }
+    
+}
+
+/* Shop Page */
+#page-header {
+    background-color:blue;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+#page-header h2 {
+  font-size: 26px;
+  color:beige;
+}
+#page-header p{
+  color: darkgreen;
+}
+
+/* Gallery page */
+#page-header.gallery-header{
+    background-color:aqua;
+
+}
+
+#page-header.gallery-header h2{
+    font-size: 36px;
+}
+
+/* About Page */
+#about .about-box {
+    background-color:beige;
+    justify-content: center;
+    text-align: center;
+}
+
+#about .about-box p{
+    color: teal;
+}
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img{
+    width: 70px;
+}
+
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal table td{
+    width: 50%;
+    border: 1px solid tan;
+    padding: 10px;
+    font-size: 14px;
+}
+#subtotal button {
+    background-color: darkgreen;
+    color:beige;
+    padding: 12px 20px;
+}
